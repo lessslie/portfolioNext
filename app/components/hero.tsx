@@ -105,7 +105,7 @@ export default function Hero() {
         <div className="flex gap-4 justify-center mb-2">
           <a href="https://github.com/lessslie" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded shadow transition">GitHub</a>
           <a href="https://www.linkedin.com/in/agata-morales/" target="_blank" rel="noopener noreferrer" className="bg-gray-500 hover:bg-gray-400 text-white px-4 py-2 rounded shadow transition">LinkedIn</a>
-          <a href="mailto:agata.morales92@gmail.com" className="bg-gray-400 hover:bg-gray-300 text-gray-900 px-4 py-2 rounded shadow transition">E-mail</a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=agata.morales92@gmail.com" target="_blank" rel="noopener noreferrer" className="bg-gray-400 hover:bg-gray-300 text-gray-900 px-4 py-2 rounded shadow transition">E-mail</a>
         </div>
       </div>
     </div>

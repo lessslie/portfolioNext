@@ -11,7 +11,7 @@ export default function Footer() {
             <a href="https://www.linkedin.com/in/agata-morales/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
               LinkedIn
             </a>
-            <a href="mailto:agata.morales92@gmail.com" className="text-gray-400 hover:text-white">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=agata.morales92@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
               E-mail
             </a>
           </div>
