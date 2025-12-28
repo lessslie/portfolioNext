@@ -16,15 +16,36 @@ function VideoCarousel({ videos, image, heightClass = "h-48" }: { videos: string
     e.stopPropagation();
     setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
+
+  const isImage = (s: string) => /\.(jpg|jpeg|png|svg|webp)$/i.test(s);
+  const isVideoFile = (s: string) => /\.(mp4|webm|ogg)$/i.test(s);
+  const isYouTube = (s: string) => /youtube\.com|youtu\.be/.test(s);
+  const toEmbedUrl = (s: string) => {
+    const match = s.match(/(?:v=|\/)([0-9A-Za-z_-]{11})/);
+    if (match) return `https://www.youtube.com/embed/${match[1]}?rel=0&modestbranding=1`;
+    return s;
+  };
+
   return (
     <div className="relative w-full">
-      {typeof slides[current] === 'string' && slides[current].match(/\.(jpg|jpeg|png|svg)$/i) ? (
+      {typeof slides[current] === 'string' && isImage(slides[current]) ? (
         <img
           src={slides[current]}
           alt="preview"
           className={`w-full ${heightClass} object-cover rounded-t`}
           style={{ background: '#222' }}
         />
+      ) : isYouTube(slides[current]) ? (
+        <div className={`w-full ${heightClass} rounded-t overflow-hidden`} style={{ background: '#000' }}>
+          <iframe
+            src={toEmbedUrl(slides[current])}
+            title="YouTube video"
+            className="w-full h-full"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
       ) : (
         <video
           src={slides[current]}
@@ -90,11 +111,48 @@ export default function Portfolio() {
       "/videos/mlVIDEO.mp4"
     ]
   },
+  {
+    id: 7,
+    title: "Edtech - Sistema de Gestión de Testimonios",
+    description: "Plataforma CMS para gestión y visualización de testimonios con roles de usuario, moderación y widgets embebibles para sitios externos.",
+    year: "2024",
+    technologies: ["Next.js 16", "TypeScript", "Tailwind CSS", "Redux Toolkit", "NestJS", "PostgreSQL", "TypeORM", "JWT", "Sonner"],
+    links: [
+      { label: "Video Demo", url: "https://www.youtube.com/watch?v=F7Inje20o8s" },
+      { label: "Sitio en Vivo", url: "https://edtech-blush-one.vercel.app/auth/login" }
+    ],
+    image: "https://img.youtube.com/vi/F7Inje20o8s/maxresdefault.jpg",
+    videos: [
+      "https://www.youtube.com/watch?v=F7Inje20o8s"
+    ]
+  },
+
+  {
+    id: 8,
+    title: "RunSnap - Plataforma de Fotografía Deportiva",
+    description: "RunSnap es una plataforma para fotógrafos deportivos que permite capturar, organizar y vender fotografías de eventos; búsqueda por número de dorsal y descargas sin marca de agua.",
+    year: "2025",
+    technologies: ["Next.js 14", "React 18", "TypeScript", "Tailwind CSS", "NestJS", "PostgreSQL (Supabase)", "TypeORM", "MercadoPago", "Multer", "JWT"],
+    links: [
+      { label: "Proyecto (local)", url: "file:///C:/PROYECTOS/FotoRun" }
+    ],
+    image: "/runSnap (1).png",
+    videos: [
+      "/runSnap (2).png",
+      "/runSnap (3).png",
+      "/runSnap (4).png",
+      "/runSnap (5).png",
+      "/runSnap (6).png",
+      "/runSnap (7).png",
+      "/videos/RunSnapVIDEO.mp4"
+    ]
+  },
 
   {
     id: 5,
     title: "SaludPublica Connect",
     description: "Plataforma fullstack de gestion de turnos para centros de salud publicos. Incluye triaje con IA, reservas, panel admin y notificaciones asincronas.",
+
     year: "2025",
     technologies: ["React", "TypeScript", "Vite", "TailwindCSS", "NestJS", "Prisma", "PostgreSQL", "Redis", "Bull", "JWT"],
     links: [
