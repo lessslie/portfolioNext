@@ -71,6 +71,46 @@ export default function Portfolio() {
 
   const works = [
   {
+    id: 6,
+    title: "MeliInsights",
+    description: "Plataforma fullstack de Business Intelligence para Mercado Libre. Conecta con OAuth2, importa publicaciones y obtén análisis con IA (GPT-4) para optimizar títulos, descripciones y precios.",
+    year: "2025",
+    technologies: ["Next.js 16", "TypeScript", "NestJS", "PostgreSQL", "OpenAI GPT-4", "OAuth2", "Mercado Libre API", "JWT", "Swagger"],
+    links: [
+      { label: "Demo en Vivo", url: "https://prueba-tec-nu.vercel.app" },
+      { label: "Documentación API", url: "https://prueba-tec-rmp9.onrender.com/api/docs" },
+      { label: "Repositorio", url: "https://github.com/lessslie/prueba-tec" },
+      { label: "Video Demo (Local)", url: "/videos/mlVIDEO.mp4" }
+    ],
+    image: "/ml1.png",
+    videos: [
+      "/ml2.png",
+      "/ml3.png",
+      "/ml4.png",
+      "/videos/mlVIDEO.mp4"
+    ]
+  },
+
+  {
+    id: 5,
+    title: "SaludPublica Connect",
+    description: "Plataforma fullstack de gestion de turnos para centros de salud publicos. Incluye triaje con IA, reservas, panel admin y notificaciones asincronas.",
+    year: "2025",
+    technologies: ["React", "TypeScript", "Vite", "TailwindCSS", "NestJS", "Prisma", "PostgreSQL", "Redis", "Bull", "JWT"],
+    links: [
+      { label: "Repositorio", url: "https://github.com/lessslie/salud-publica-connect" },
+      { label: "Coleccion Postman", url: "https://github.com/lessslie/salud-publica-connect/blob/main/SaludPublicaConnect.postman_collection.json" },
+      { label: "README", url: "https://github.com/lessslie/salud-publica-connect#readme" }
+    ],
+    image: "/salud-publica-1.png",
+    videos: [
+      "/salud-publica-2.png",
+      "/salud-publica-3.png",
+      "/salud-publica-4.png"
+    ]
+  },
+
+  {
     id: 1,
     title: "Plataforma de Gestión para Cementerio Parque Valle de Paz",
     description: "Backend Developer en un equipo de 6 desarrolladores. APIs RESTful, autenticación y roles, modelos de datos y documentación con Swagger.",
@@ -139,7 +179,7 @@ export default function Portfolio() {
   const filteredWorks = works;
 
   return (
-  <section className="bg-black py-20">
+  <section id="portfolio" className="bg-black py-20">
     <div className="container mx-auto px-4">
       <motion.div layout className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <AnimatePresence>

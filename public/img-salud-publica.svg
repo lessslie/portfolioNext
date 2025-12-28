@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1224"/>
+      <stop offset="50%" stop-color="#0E1C3A"/>
+      <stop offset="100%" stop-color="#10294F"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#123768"/>
+      <stop offset="100%" stop-color="#0B2142"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#35E0A3"/>
+      <stop offset="100%" stop-color="#4AC6FF"/>
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <circle cx="240" cy="140" r="120" fill="#182A4F" opacity="0.4"/>
+  <circle cx="1020" cy="620" r="160" fill="#0E254A" opacity="0.45"/>
+  <circle cx="960" cy="120" r="110" fill="#1B345D" opacity="0.35"/>
+  <rect x="120" y="160" width="960" height="420" rx="32" fill="url(#card)" stroke="#4AC6FF" stroke-opacity="0.2"/>
+  <rect x="160" y="200" width="560" height="320" rx="20" fill="#0B1A33" stroke="#35E0A3" stroke-opacity="0.2"/>
+  <rect x="760" y="200" width="240" height="120" rx="16" fill="#0B1A33" stroke="#35E0A3" stroke-opacity="0.25"/>
+  <rect x="760" y="344" width="240" height="64" rx="16" fill="#0B1A33" stroke="#4AC6FF" stroke-opacity="0.25"/>
+  <rect x="760" y="424" width="240" height="64" rx="16" fill="#0B1A33" stroke="#4AC6FF" stroke-opacity="0.25"/>
+  <rect x="200" y="240" width="240" height="24" rx="12" fill="url(#accent)" opacity="0.65"/>
+  <rect x="200" y="280" width="300" height="14" rx="7" fill="#35E0A3" opacity="0.4"/>
+  <rect x="200" y="306" width="220" height="14" rx="7" fill="#35E0A3" opacity="0.4"/>
+  <rect x="200" y="332" width="180" height="14" rx="7" fill="#35E0A3" opacity="0.35"/>
+  <rect x="200" y="370" width="140" height="22" rx="11" fill="#4AC6FF" opacity="0.7"/>
+  <rect x="364" y="370" width="110" height="22" rx="11" fill="#35E0A3" opacity="0.7"/>
+  <rect x="200" y="408" width="280" height="12" rx="6" fill="#4AC6FF" opacity="0.25"/>
+  <rect x="200" y="430" width="240" height="12" rx="6" fill="#4AC6FF" opacity="0.25"/>
+  <rect x="200" y="452" width="260" height="12" rx="6" fill="#4AC6FF" opacity="0.25"/>
+  <rect x="520" y="240" width="160" height="240" rx="18" fill="#102342" stroke="#4AC6FF" stroke-opacity="0.3"/>
+  <circle cx="600" cy="320" r="54" fill="#0D203D" stroke="#35E0A3" stroke-opacity="0.7" stroke-width="6"/>
+  <rect x="552" y="404" width="96" height="18" rx="9" fill="#35E0A3" opacity="0.6"/>
+  <rect x="552" y="432" width="96" height="12" rx="6" fill="#4AC6FF" opacity="0.35"/>
+  <text x="190" y="150" fill="#9FCBFF" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="3">FULLSTACK HEALTH PLATFORM</text>
+  <text x="190" y="200" fill="#EBF4FF" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="700">SaludPublica Connect</text>
+  <text x="190" y="540" fill="#CFE4FF" font-family="Inter, Arial, sans-serif" font-size="18">Turnos online · Triaje con IA · Panel admin · Notificaciones</text>
+  <text x="780" y="250" fill="#CFE4FF" font-family="Inter, Arial, sans-serif" font-size="18">Stack</text>
+  <text x="780" y="280" fill="#9FCBFF" font-family="Inter, Arial, sans-serif" font-size="14">React · Vite · Tailwind</text>
+  <text x="780" y="304" fill="#9FCBFF" font-family="Inter, Arial, sans-serif" font-size="14">NestJS · Prisma · PostgreSQL</text>
+  <text x="780" y="328" fill="#9FCBFF" font-family="Inter, Arial, sans-serif" font-size="14">Redis · Bull · JWT</text>
+  <text x="780" y="386" fill="#CFE4FF" font-family="Inter, Arial, sans-serif" font-size="16">Reservas y slots</text>
+  <text x="780" y="466" fill="#CFE4FF" font-family="Inter, Arial, sans-serif" font-size="16">Notificaciones async</text>
+  <circle cx="1040" cy="264" r="32" fill="url(#accent)" opacity="0.85" filter="url(#glow)"/>
+  <circle cx="1040" cy="264" r="18" fill="#0B1224"/>
+  <rect x="960" y="520" width="80" height="8" rx="4" fill="#35E0A3" opacity="0.5"/>
+  <rect x="160" y="520" width="80" height="8" rx="4" fill="#4AC6FF" opacity="0.5"/>
+</svg>
